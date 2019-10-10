@@ -6,10 +6,17 @@
     <section *ngIf ="(afAuth.user | async) as user; else loginTitle">
     <ion-title>마이페이지</ion-title>
     </section>
+    <ion-buttons slot="primary">
+        <ion-button (click)="receipt()">
+          나의 쇼핑
+          <ion-icon slot="end" name="md-cart"></ion-icon>
+        </ion-button>
+      </ion-buttons>
     <ng-template #loginTitle>
         <ion-title>로그인</ion-title>
     </ng-template>
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content padding>

@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar color = "primary">
+        <ion-buttons slot = "start">
+            <ion-back-button text="" defaultHref = "home"></ion-back-button>
+          </ion-buttons>
+      <ion-title>회원가입</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-list>
+        <ion-item>
+          <ion-label position="floating">이메일</ion-label>
+          <ion-input type="text" [(ngModel)]="username"></ion-input>
+        </ion-item>
+      <ion-item lines="none">
+          <ion-label position="floating">닉네임</ion-label>
+          <ion-input type="text" [(ngModel)]="userid"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position ="floating">비밀번호 - 6자리 이상 </ion-label>
+          <ion-input type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">비밀번호 확인</ion-label>
+          <ion-input type="password" [(ngModel)]="cpassword"></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-button fill="solid" expand="block" (click)="register()">완료</ion-button>
+  </ion-content>
+  

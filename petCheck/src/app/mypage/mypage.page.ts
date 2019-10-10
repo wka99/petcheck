@@ -28,7 +28,6 @@ export class MypagePage implements OnInit {
   public keyforpost;
   public userid: string = null;
   public userpic: string = null;
-  public userauth: any;
   temp_em: string;
 user: User = {
   email: '',
@@ -258,7 +257,6 @@ user: User = {
             this.userid = null;
             this.useremail = null;
             this.userpic = null;
-            this.userauth = null;
             this.username = null;
             this.password = null;
             this.stor.set('id', null);

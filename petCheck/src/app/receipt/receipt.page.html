@@ -17,22 +17,25 @@
 <ion-content>
       <ion-header translucent>
         <ion-toolbar>
-          <ion-title align="center">나의 쇼핑</ion-title>
+          <ion-buttons slot = "start">
+              <ion-back-button text="" defaultHref="mypage"></ion-back-button>
+          </ion-buttons>
+          <ion-title>나의 쇼핑</ion-title>
         </ion-toolbar>
       </ion-header>
   
       <ion-content fullscreen>
         <!-- Icon top -->
         <ion-segment color="tertiary">
-          <ion-segment-button (ionSelect)="segmentButtonClicked($event)">
+          <ion-segment-button>
             <ion-label>쿠폰</ion-label>
             <ion-icon name="archive"></ion-icon>
           </ion-segment-button>
-          <ion-segment-button checked (ionSelect)="segmentButtonClicked($event)">
+          <ion-segment-button>
             <ion-label>포인트</ion-label>
             <ion-icon name="logo-bitcoin"></ion-icon>
           </ion-segment-button>
-          <ion-segment-button (ionSelect)="segmentButtonClicked($event)">
+          <ion-segment-button>
             <ion-label>멤버십</ion-label>
             <ion-icon name="ios-card"></ion-icon>
           </ion-segment-button>
@@ -76,4 +79,5 @@
         padding: 5px;
       }
     </style>
+  </ion-content>
   </ion-content>

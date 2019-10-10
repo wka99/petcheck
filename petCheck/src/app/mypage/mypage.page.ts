@@ -9,6 +9,7 @@ import * as firebase from 'firebase';
 import {AngularFireStorage} from 'angularfire2/storage';
 import {AngularFireDatabase, snapshotChanges } from 'angularfire2/database';
 import {Camera} from '@ionic-native/camera/ngx';
+import { ReceiptPage } from '../receipt/receipt.page';
 
 interface User {
   email?: string;
@@ -129,6 +130,13 @@ user: User = {
       ]
     });
     await alert.present();
+  }
+  selectMyshopping(){
+    this.navCtrl.navigateForward('/receipt');
+    console.log("selectMyshopping");
+  }
+  receipt() {
+    this.router.navigate(['receipt']);
   }
   logout() {
     this.userid = null;

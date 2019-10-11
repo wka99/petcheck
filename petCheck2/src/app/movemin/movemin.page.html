@@ -12,17 +12,15 @@
         최소:&nbsp;{{min}}원
     </div>
     <ion-col *ngFor="let item of hos" col-12 no-padding>
-            <ion-card>
-              <ion-card-content class="fixline" >
-                {{item.hos}}<br>
-                <div *ngFor="let uit of item.user">
+            {{item.hos}}<br>
+                <ion-card *ngFor="let uit of item.user">
+                    <ion-card-content class="fixline" >
                         {{uit.petname}}<br>
                         {{uit.petsex}}<br>
                         {{uit.petcate}}<br>
                         {{uit.petsize}}<br>
                         {{uit.petage}}<br>
-                </div>
-              </ion-card-content>
-            </ion-card>
-            </ion-col>
+                    </ion-card-content>
+                </ion-card>
+    </ion-col>
 </ion-content>

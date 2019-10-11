@@ -26,6 +26,7 @@ export class MoveminPage implements OnInit {
     this.db.list('hospital/', ref => ref.orderByChild('np').equalTo(`${this.disease}_${this.min}`)).valueChanges().subscribe(
       data => {
         this.hos = data;
+        console.log(this.hos);
     });
   }
 

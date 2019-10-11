@@ -1,0 +1,30 @@
+.price{
+    width: 100%;
+    height: 50px;
+    //border: 1px solid black;
+}
+
+#avgpri{
+    font-size : 20pt;
+    padding-top : 5px;
+    text-align : center;
+}
+
+#maxpri, #minpri{
+    padding-top : 15px;
+    padding-left : 20px;
+    border-radius: 10px;
+    margin-bottom : 5px;
+    background-color: rgb(236, 236, 236);
+}
+
+.info_i{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    text-align: right;
+    padding-right: 20px;
+    padding-top : 7px;
+    bottom : 35px;
+}
+

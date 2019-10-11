@@ -125,28 +125,28 @@ user: User = {
         });
         // 펫 나이
         rootRef.child('userInfo').child(`${temp[0]}/petage`).once('value', function(data) {
-          useridtmp = data.val();
+          petagetmp = data.val();
         }).then( result => {
           this.petage = result.val();
           this.stor.set('petage', result.val());
         });
         // 펫 성별
         rootRef.child('userInfo').child(`${temp[0]}/petsex`).once('value', function(data) {
-          useridtmp = data.val();
+          petsextmp = data.val();
         }).then( result => {
           this.petsex = result.val();
           this.stor.set('petsex', result.val());
         });
         // 펫 종류
         rootRef.child('userInfo').child(`${temp[0]}/petcate`).once('value', function(data) {
-          useridtmp = data.val();
+          petcatetmp = data.val();
         }).then( result => {
           this.petcate = result.val();
           this.stor.set('petcate', result.val());
         });
         // 펫 크기
         rootRef.child('userInfo').child(`${temp[0]}/petsize`).once('value', function(data) {
-          useridtmp = data.val();
+          petsizetmp = data.val();
         }).then( result => {
           this.petsize = result.val();
           this.stor.set('petsize', result.val());
@@ -190,10 +190,6 @@ user: User = {
       ]
     });
     await alert.present();
-  }
-  selectMyshopping(){
-    this.navCtrl.navigateForward('/receipt');
-    console.log("selectMyshopping");
   }
   Agree() {
     this.router.navigate(['agree']);

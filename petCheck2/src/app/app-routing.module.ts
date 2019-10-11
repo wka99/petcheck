@@ -8,6 +8,10 @@ const routes: Routes = [
   { path: 'mypage', loadChildren: './mypage/mypage.module#MypagePageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
   { path: 'medical-chart', loadChildren: './medical-chart/medical-chart.module#MedicalChartPageModule' },
+  { path: 'movemin/:d/:p', loadChildren: './movemin/movemin.module#MoveminPageModule' },
+  { path: 'movemax/:d/:p', loadChildren: './movemax/movemax.module#MovemaxPageModule' },
+
+
 ];
 
 @NgModule({

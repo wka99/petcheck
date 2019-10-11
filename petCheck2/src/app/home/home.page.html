@@ -19,10 +19,10 @@
         평균 치료비:&nbsp;{{avg}}원 
       </div>
       <div class = "price" id = "maxpri">
-        최대:&nbsp;{{max}}원 <div class = "info_i"><ion-icon name="information-circle" style="zoom:2.0;" color ="tertiary"></ion-icon></div>
+        최대:&nbsp;{{max}}원 <div class = "info_i"><ion-icon (click)="movemax()" name="information-circle" style="zoom:2.0;" color ="tertiary"></ion-icon></div>
       </div>
       <div class = "price" id = "minpri">
-        최소:&nbsp;{{min}}원 <div class = "info_i"><ion-icon name="information-circle" style="zoom:2.0;" color ="tertiary"></ion-icon></div>
+        최소:&nbsp;{{min}}원 <div class = "info_i"><ion-icon (click)="movemin()" name="information-circle" style="zoom:2.0;" color ="tertiary"></ion-icon></div>
       </div>
       <hr width=100% color = "lightgray">
           <ion-col *ngFor="let item of posts" col-12 no-padding>

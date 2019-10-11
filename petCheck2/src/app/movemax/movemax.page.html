@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar color = "primary">
+        <ion-buttons slot = "start">
+            <ion-back-button text="" defaultHref = "home"></ion-back-button>
+          </ion-buttons>
+    <ion-title>최대 비용 진료 목록</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class = "price" id = "maxpri">
+        최대:&nbsp;{{max}}원
+    </div>
+    <ion-col *ngFor="let item of hos" col-12 no-padding>
+            <ion-card>
+              <ion-card-content class="fixline" >
+                    {{item.hos}}<br>
+                    {{item.user[0].petname}}<br>
+                    {{item.user[0].petsex}}<br>
+                    {{item.user[0].petcate}}<br>
+                    {{item.user[0].petsize}}<br>
+                    {{item.user[0].petage}}<br>
+              </ion-card-content>
+            </ion-card>
+            </ion-col>
+</ion-content>

@@ -14,6 +14,7 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
+  val = '';
   posts = [];
   avg = 0;
   max = 0;
@@ -39,18 +40,23 @@ export class HomePage implements OnInit {
        });
     });
   }
-  getPost(item: any){
-
+  movemin() {
+    console.log(this.val);
+    console.log(this.min);
+    this.navCtrl.navigateForward('/movemin/' + this.val + '/' + this.min);
+  }
+  movemax() {
+    this.navCtrl.navigateForward('/movemax/' + this.val + '/' + this.max);
   }
   getItems(ev) {
     this.avg = 0;
     this.max = 0;
     this.min = 0;
-    const val = ev.target.value;
-    console.log(val);
-    if (val !== '') {
+    this.val = ev.target.value;
+    console.log(this.val);
+    if (this.val !== '') {
       firebase.database().ref().once('value').then((snapshot) => {
-        this.db.list('hospital/', ref => ref.orderByChild('name').equalTo(val)).valueChanges().subscribe(
+        this.db.list('hospital/', ref => ref.orderByChild('name').equalTo(this.val)).valueChanges().subscribe(
           data => {
             console.log(data);
             this.posts = data;

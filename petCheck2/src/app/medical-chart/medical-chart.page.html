@@ -9,7 +9,8 @@
 
 <ion-content>
   <ion-button expand="block" shape="round" fill="outline" (click)="download()">
-    <ion-icon name="contact"></ion-icon>(복숭이)의 신규 진단서 업로드
+      <input id="f" type="file">
+      <ion-icon name="contact"></ion-icon>(복숭이)의 신규 진단서 업로드
   </ion-button>
 
   <ion-card *ngIf="newValue==1" color = "primary">

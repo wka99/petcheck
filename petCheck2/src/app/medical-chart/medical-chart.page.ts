@@ -11,7 +11,7 @@ export class MedicalChartPage implements OnInit {
   price;
   newValue=0;
   constructor(
-    public dataFinder: DataFinderService, 
+    public dataFinder: DataFinderService,
     public alertCtrl: AlertController,
   ) {
     //json데이터 가져오기
@@ -33,8 +33,7 @@ export class MedicalChartPage implements OnInit {
       },{
         text: '네',
         handler:()=>{
-          this.newValue=1;
-          console.log(this.newValue);
+          this.up();
         }
       }]
     }).then(alertEI => {
@@ -43,5 +42,9 @@ export class MedicalChartPage implements OnInit {
   }
   ngOnInit() {
   }
-
+  up() {
+    document.getElementById('f').click();
+    this.newValue = 1;
+    console.log(this.newValue);
+  }
 }

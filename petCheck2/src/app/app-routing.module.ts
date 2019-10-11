@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'insurance', loadChildren: './insurance/insurance.module#InsurancePageModule' },
 
 
+
 ];
 
 @NgModule({

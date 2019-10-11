@@ -22,11 +22,11 @@
         <ion-label>전체동의</ion-label>
       </ion-item>
     <ion-list-header>
-        <ion-label>개인정보 수집 및 이용목적</ion-label>
+        <ion-label>(필수)개인정보 수집 및 이용목적</ion-label>
       </ion-list-header>
       <ion-item *ngFor="let item of items1">
-        <ion-checkbox slot="start" [(ngModel)]="item.isChecked"></ion-checkbox>
-        <ion-label>{{item.name}}</ion-label>
+          <ion-label>{{item.text}}</ion-label>
+          <ion-checkbox slot="start" [(ngModel)]="item.isChecked"></ion-checkbox>
       </ion-item>
   <ion-list-header>
     <ion-label>(선택)제 3자 정보 제공 동의</ion-label>

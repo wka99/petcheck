@@ -30,6 +30,11 @@ export class MypagePage implements OnInit {
   public keyforpost;
   public userid: string = null;
   public userpic: string = null;
+  public petname: string = null;
+  public petsex: string = null;
+  public petcate: string = null;
+  public petsize: string = null;
+  public petage: string = null;
   temp_em: string;
 user: User = {
   email: '',
@@ -60,11 +65,31 @@ user: User = {
     this.stor.get('pic').then((val) => {
       this.userpic = val;
     });
+    this.stor.get('petname').then((val) => {
+      this.petname = val;
+    });
+    this.stor.get('petsex').then((val) => {
+      this.petsex = val;
+    });
+    this.stor.get('petcate').then((val) => {
+      this.petcate = val;
+    });
+    this.stor.get('petsize').then((val) => {
+      this.petsize = val;
+    });
+    this.stor.get('petage').then((val) => {
+      this.petage = val;
+    });
   }
   async login() {
     // tslint:disable-next-line:prefer-const
     let useridtmp;
     let userpictmp;
+    let petnametmp;
+    let petsextmp;
+    let petagetmp;
+    let petsizetmp;
+    let petcatetmp;
     const { username, password } = this;
     try {
         const rootRef = firebase.database().ref();
@@ -90,6 +115,41 @@ user: User = {
           this.userpic = result.val();
           document.getElementById('upic').setAttribute('src', this.userpic);
           this.stor.set('pic', result.val());
+        });
+        // 펫 이름
+        rootRef.child('userInfo').child(`${temp[0]}/petname`).once('value', function(data) {
+          petnametmp = data.val();
+        }).then( result => {
+          this.petname = result.val();
+          this.stor.set('petname', result.val());
+        });
+        // 펫 나이
+        rootRef.child('userInfo').child(`${temp[0]}/petage`).once('value', function(data) {
+          useridtmp = data.val();
+        }).then( result => {
+          this.petage = result.val();
+          this.stor.set('petage', result.val());
+        });
+        // 펫 성별
+        rootRef.child('userInfo').child(`${temp[0]}/petsex`).once('value', function(data) {
+          useridtmp = data.val();
+        }).then( result => {
+          this.petsex = result.val();
+          this.stor.set('petsex', result.val());
+        });
+        // 펫 종류
+        rootRef.child('userInfo').child(`${temp[0]}/petcate`).once('value', function(data) {
+          useridtmp = data.val();
+        }).then( result => {
+          this.petcate = result.val();
+          this.stor.set('petcate', result.val());
+        });
+        // 펫 크기
+        rootRef.child('userInfo').child(`${temp[0]}/petsize`).once('value', function(data) {
+          useridtmp = data.val();
+        }).then( result => {
+          this.petsize = result.val();
+          this.stor.set('petsize', result.val());
         });
         this.alertCtrl.create({
           header: '',
@@ -144,9 +204,19 @@ user: User = {
     this.userpic = null;
     this.username = null;
     this.password = null;
+    this.petname = null;
+    this.petcate = null;
+    this.petsize = null;
+    this.petsex = null;
+    this.petage = null;
     this.stor.set('id', null);
     this.stor.set('email', null);
     this.stor.set('pic', null);
+    this.stor.set('petname', null);
+    this.stor.set('petcate', null);
+    this.stor.set('petsex', null);
+    this.stor.set('petage', null);
+    this.stor.set('petsize', null);
     // tslint:disable-next-line:only-arrow-functions
     firebase.auth().signOut().then(function() { // 채팅 못하도록 함
       console.log('Sign-out successful');

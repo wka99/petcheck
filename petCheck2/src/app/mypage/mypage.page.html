@@ -25,7 +25,28 @@
           <ion-icon name="image"></ion-icon>
       </ion-button>
     </div>
-    <br><br>
+    <br>
+    내 강아지 정보
+    <ion-card>
+      <ion-card-content class="fixline" >
+        <ion-item>
+           이름: {{petname}}
+        </ion-item>
+        <ion-item>
+            성별: {{petsex}}
+         </ion-item>
+         <ion-item>
+            종류: {{petcate}}
+         </ion-item>
+         <ion-item>
+            크기: {{petsize}}
+         </ion-item>
+         <ion-item>
+            나이: {{petage}}
+         </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <br>
     <ion-item>
       <button class="transparent-button">내 강아지 진료내역</button>
     </ion-item>

@@ -39,6 +39,9 @@ export class HomePage implements OnInit {
        });
     });
   }
+  getPost(item: any){
+
+  }
   getItems(ev) {
     this.avg = 0;
     this.max = 0;

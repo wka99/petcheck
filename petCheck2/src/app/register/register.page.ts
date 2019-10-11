@@ -19,8 +19,12 @@ export class RegisterPage implements OnInit {
    password: string = '';
    // tslint:disable-next-line:no-inferrable-types
    cpassword: string = '';
-
+   petname: string;
+   petage: string;
+   petcate: string;
+   petsize: string;
    userid: string;
+   petsex: string;
    // tslint:disable-next-line:max-line-length
    userpic = 'https://firebasestorage.googleapis.com/v0/b/petcheck-6a816.appspot.com/o/appimg%2FKakaoTalk_20190927_163422437.png?alt=media&token=b25f7fa0-95ee-49c0-9264-34f478a5c81c';
 
@@ -65,6 +69,11 @@ export class RegisterPage implements OnInit {
      this.db.object(`userInfo/${strArray[0]}/userid`).set(this.userid);
      // tslint:disable-next-line:max-line-length
      this.db.object(`userInfo/${strArray[0]}/userpic`).set(this.userpic);
+     this.db.object(`userInfo/${strArray[0]}/petname`).set(this.petname);
+     this.db.object(`userInfo/${strArray[0]}/petage`).set(this.petage);
+     this.db.object(`userInfo/${strArray[0]}/petsize`).set(this.petsize);
+     this.db.object(`userInfo/${strArray[0]}/petcate`).set(this.petcate);
+     this.db.object(`userInfo/${strArray[0]}/petsex`).set(this.petsex);
      try {
        const res =  this.afAuth.auth.createUserWithEmailAndPassword(username, password);
        this.alertCtrl.create({

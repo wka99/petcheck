@@ -13,7 +13,7 @@
         <ion-label position="floating">이메일</ion-label>
         <ion-input type="text" [(ngModel)]="username"></ion-input>
       </ion-item>
-    <ion-item lines="none">
+      <ion-item>
         <ion-label position="floating">닉네임</ion-label>
         <ion-input type="text" [(ngModel)]="userid"></ion-input>
       </ion-item>
@@ -25,6 +25,61 @@
         <ion-label position="floating">비밀번호 확인</ion-label>
         <ion-input type="password" [(ngModel)]="cpassword"></ion-input>
       </ion-item>
+      <ion-item>
+        <ion-label position="floating">강아지 이름</ion-label>
+        <ion-input type="text" [(ngModel)]="petname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">강아지 종</ion-label>
+        <ion-select placeholder="종 선택" [(ngModel)]="petcate">
+          <ion-select-option value="포메라니안">포메라니안</ion-select-option>
+          <ion-select-option value="미니어처 핀셔">미니어처 핀셔</ion-select-option>
+          <ion-select-option value="파피용">파피용</ion-select-option>
+          <ion-select-option value="토이푸들">토이푸들</ion-select-option>
+          <ion-select-option value="골든 리트리버">골든 리트리버</ion-select-option>
+          <ion-select-option value="그레이트 데인">그레이트 데인</ion-select-option>
+          <ion-select-option value="닥스훈트">닥스훈트</ion-select-option>
+          <ion-select-option value="도베르만 핀셔">도베르만 핀셔</ion-select-option>
+          <ion-select-option value="말티즈">말티즈</ion-select-option>
+          <ion-select-option value="바셋하운드">바셋하운드</ion-select-option>
+          <ion-select-option value="보더 콜리">보더 콜리</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">강아지 성별</ion-label>
+        <ion-select placeholder="성별 선택" [(ngModel)]="petsex">
+          <ion-select-option value="여">여</ion-select-option>
+          <ion-select-option value="남">남</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">강아지 나이</ion-label>
+        <ion-select placeholder="나이 선택" [(ngModel)]="petage">
+          <ion-select-option value="0">0살</ion-select-option>
+          <ion-select-option value="1">1살</ion-select-option>
+          <ion-select-option value="2">2살</ion-select-option>
+          <ion-select-option value="3">3살</ion-select-option>
+          <ion-select-option value="4">4살</ion-select-option>
+          <ion-select-option value="5">5살</ion-select-option>
+          <ion-select-option value="6">6살</ion-select-option>
+          <ion-select-option value="7">7살</ion-select-option>
+          <ion-select-option value="8">8살</ion-select-option>
+          <ion-select-option value="9">9살</ion-select-option>
+          <ion-select-option value="10">10살</ion-select-option>
+          <ion-select-option value="11">11살</ion-select-option>
+          <ion-select-option value="12">12살</ion-select-option>
+          <ion-select-option value="13">13살</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">강아지 크기</ion-label>
+        <ion-select placeholder="크기 선택" [(ngModel)]="petsize">
+          <ion-select-option value="소형견">소형견</ion-select-option>
+          <ion-select-option value="중형견">중형견</ion-select-option>
+          <ion-select-option value="대형견">대형견</ion-select-option>
+        </ion-select>
+      </ion-item>
+
   </ion-list>
   <ion-button fill="solid" expand="block" (click)="register()">완료</ion-button>
 </ion-content>

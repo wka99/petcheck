@@ -40,6 +40,7 @@ user: User = {
   email: '',
   password: '',
 };
+openme = false;
   // tslint:disable-next-line:no-inferrable-types
   username: string = '';
   // tslint:disable-next-line:no-inferrable-types
@@ -54,7 +55,13 @@ user: User = {
     public st: AngularFireStorage,
     private camera: Camera
     ) { }
-
+  open() {
+    if (this.openme == false){
+        this.openme = true;
+      }else{
+        this.openme = false;
+      }
+  }
   ngOnInit() {
     this.stor.get('id').then((val) => {
       this.userid = val;
@@ -81,6 +88,7 @@ user: User = {
       this.petage = val;
     });
   }
+  //
   async login() {
     // tslint:disable-next-line:prefer-const
     let useridtmp;

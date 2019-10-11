@@ -10,11 +10,23 @@
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-        <ion-fab vertical="bottom" horizontal="end" edge slot="fixed">
-            <ion-fab-button>
-              <ion-icon name="md-create"></ion-icon>
-            </ion-fab-button>
-          </ion-fab>
-  </div>
+  <ion-grid style = "height: 200%">
+        <ion-searchbar [(ngModel)]="queryTxt"
+        (ionInput)="getItems($event)"
+        placeholder="치료비가 궁금한 병명/수술 등">
+      </ion-searchbar>
+      <br>
+      <b>&nbsp;&nbsp; 평균 치료비:&nbsp;{{avg}}원</b><br>
+      <b>&nbsp;&nbsp; 최대:&nbsp;{{max}}원</b><br>
+      <b>&nbsp;&nbsp; 최소:&nbsp;{{min}}원</b><br>
+          <ion-col *ngFor="let item of posts" col-12 no-padding>
+          <ion-card>
+            <ion-card-content class="fixline" >
+              <b>{{item.hos}}</b><br><br>
+              <b>수술명:&nbsp;</b>{{item.name}}<br>
+              <b>비용:&nbsp;</b>{{item.price}}
+            </ion-card-content>
+          </ion-card>
+          </ion-col>
+    </ion-grid>
 </ion-content>

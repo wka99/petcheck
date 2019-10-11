@@ -43,7 +43,6 @@ export class MedicalChartPage implements OnInit {
   ngOnInit() {
   }
   up() {
-    document.getElementById('f').click();
     this.newValue = 1;
     console.log(this.newValue);
   }

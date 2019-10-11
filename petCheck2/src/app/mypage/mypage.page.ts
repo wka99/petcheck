@@ -357,4 +357,8 @@ user: User = {
 
   }
 
+  goMedicalChart(){
+    this.router.navigateByUrl('medical-chart');
+  }
+
 }

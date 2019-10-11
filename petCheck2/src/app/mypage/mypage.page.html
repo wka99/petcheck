@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar color = "primary">
+      <ion-buttons slot = "start">
+          <ion-back-button text="" defaultHref="home"></ion-back-button>
+        </ion-buttons>
+    <section *ngIf ="(afAuth.user | async) as user; else loginTitle">
+    <ion-title>마이페이지</ion-title>
+    </section>
+    <ng-template #loginTitle>
+        <ion-title>로그인</ion-title>
+    </ng-template>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding>
+  <section *ngIf ="userid!=null; else loginItems">
+     <p align="center"><b>{{userid}}</b>님</p>
+     <div align="center">
+       <ion-avatar>
+        <img id="upic" src="{{userpic}}">
+        <img *ngIf = "userpic == null" id = "upic" src ="https://firebasestorage.googleapis.com/v0/b/sulnyang.appspot.com/o/userpic%2FKakaoTalk_20190927_163422437.png?alt=media&token=d3973554-afdc-403e-ad53-53f65f1e4022">
+      </ion-avatar>
+      <ion-button shape="round" ion-button (click)="pickPicture()">
+          <ion-icon name="image"></ion-icon>
+      </ion-button>
+    </div>
+    <br>
+    내 강아지 정보
+    <ion-card>
+      <ion-card-content class="fixline" >
+        <ion-item>
+           이름: {{petname}}
+        </ion-item>
+        <ion-item>
+            성별: {{petsex}}
+         </ion-item>
+         <ion-item>
+            종류: {{petcate}}
+         </ion-item>
+         <ion-item>
+            크기: {{petsize}}
+         </ion-item>
+         <ion-item>
+            나이: {{petage}}
+         </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <br>
+    <ion-item>
+      <button class="transparent-button">내 강아지 진료내역</button>
+    </ion-item>
+    <ion-item>
+        <button (click)="Agree()" class="transparent-button">약관동의</button>
+      </ion-item>
+    <ion-item>
+      <button class="transparent-button">회원 탈퇴</button>
+    </ion-item>
+    <br>
+    <div align="center">
+    <ion-button (click)="logout()">로그아웃</ion-button>
+    </div>
+  </section>
+  
+  <ng-template #loginItems>
+  <ion-list>
+      <ion-item>
+        <ion-label position="floating" id = "input-name">이메일</ion-label>
+        <ion-input type="text" [(ngModel)]="username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating" id ="input-password">비밀번호</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+  </ion-list>
+
+  <ion-button fill="solid" expand="block" (click)="login()">Login</ion-button>
+  <br>
+  <p align="center">
+  아직 회원이 아니신가요?&nbsp;<ion-button shape="round" fill="outline" class="butn" [routerLink]="['/register']" routerDirection="forward">회원가입</ion-button>
+  </p>
+</ng-template>
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color = "primary">
+      <ion-title align="center">펫트체크</ion-title>
+      <ion-buttons slot="primary">
+        <ion-button (click)="mypage()">
+          <ion-icon slot="icon-only" name="md-contact"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid style = "height: 200%">
+        <ion-searchbar [(ngModel)]="queryTxt"
+        (ionInput)="getItems($event)"
+        placeholder="치료비가 궁금한 병명/수술 등">
+      </ion-searchbar>
+      <br>
+      <b>&nbsp;&nbsp; 평균 치료비:&nbsp;{{avg}}원</b><br>
+      <b>&nbsp;&nbsp; 최대:&nbsp;{{max}}원</b><br>
+      <b>&nbsp;&nbsp; 최소:&nbsp;{{min}}원</b><br>
+          <ion-col *ngFor="let item of posts" col-12 no-padding>
+          <ion-card (click)="getPost(item)">
+            <ion-card-content class="fixline" >
+              <b>{{item.hos}}</b><br>
+              <b>진단명:&nbsp;</b>{{item.name}}<br>
+              <b>비용:&nbsp;</b>최소&nbsp;{{item.price}}원<br>
+              <b>주소:&nbsp;</b>{{item.add}}<br>
+              <b>연락처:&nbsp;</b>{{item.tel}}<br>
+            </ion-card-content>
+          </ion-card>
+          </ion-col>
+    </ion-grid>
+</ion-content>

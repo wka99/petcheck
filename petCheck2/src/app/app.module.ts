@@ -16,7 +16,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { Camera } from '@ionic-native/camera/ngx';
 import { IonicStorageModule } from '@ionic/storage';
-
+import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -29,7 +29,8 @@ import { IonicStorageModule } from '@ionic/storage';
     AngularFireStorageModule,
     IonicStorageModule,
     IonicStorageModule.forRoot(),
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    HttpModule
   ],
   providers: [
     StatusBar,

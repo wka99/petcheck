@@ -365,4 +365,8 @@ openme = false;
 
   }
 
+  goMedicalChart(){
+    this.router.navigateByUrl('medical-chart');
+  }
+
 }

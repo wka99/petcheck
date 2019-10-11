@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataFinderService} from '../../data-finder.service';
 
 @Component({
   selector: 'app-agree',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgreePage implements OnInit {
 
-  constructor() {  }
+  selOptions: Array < string > ;
+  
   items = [{
     isChecked: false,
     name: '나의 정보'
@@ -21,10 +23,14 @@ export class AgreePage implements OnInit {
     name: '펫의 진료기록'
   },
   ];
-
-  selOptions: Array < string > ;
+  constructor(
+  ) { 
+  
+   }
+  
   ngOnInit() {
   }
+ 
   Mouseover(item:any){
     if(item.isChecked) item.isChecked=false;
     else item.isChecked=true;

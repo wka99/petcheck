@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'agree', loadChildren: './agree/agree.module#AgreePageModule' },
   { path: 'mypage', loadChildren: './mypage/mypage.module#MypagePageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
+  { path: 'medical-chart', loadChildren: './medical-chart/medical-chart.module#MedicalChartPageModule' },
 ];
 
 @NgModule({

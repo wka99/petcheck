@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataFinderService } from '../../data-finder.service';
 
 @Component({
   selector: 'app-insurance',
@@ -7,7 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InsurancePage implements OnInit {
 
-  constructor() { }
+  insData = [];
+
+  constructor(
+    public dataFinder: DataFinderService
+  ) {
+    this.dataFinder.getJSONDataAsync("../../assets/data/insurance.json").then(data => {
+      this.SetQueryOptionsData(data);
+    });
+  }
+  SetQueryOptionsData(items: any) { //items는 json데이터들
+    this.insData = items;
+    console.log(this.insData);
+  }
 
   ngOnInit() {
   }

@@ -1,9 +1,37 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>insurance</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text="" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>추천 보험</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <!-- <ion-list *ngFor="let item of insData"> -->
+  <ion-item *ngFor="let item of insData">
+    <table>
+      <tr>
+        <ion-label>{{item.insuranceName}}</ion-label>
+      </tr>
+      <tr>
+        <ion-label>{{item.companyName}}</ion-label>
+      </tr>
+      <tr>
+        <ion-label>가입나이 조건 {{item.age_limit}}</ion-label>
 
+      </tr>
+      <tr>
+        <ion-label>갱신 년도 {{item.renew_year}}</ion-label>
+
+      </tr>
+    </table>
+
+
+    <ion-label>갱신 년도 {{item.renew_year}}</ion-label>
+    <ion-label>{{item.pay_month}}</ion-label>
+
+  </ion-item>
+
+  <!-- </ion-list> -->
 </ion-content>

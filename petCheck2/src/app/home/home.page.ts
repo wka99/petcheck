@@ -92,4 +92,12 @@ export class HomePage implements OnInit {
       });
     }
   }
+
+  ins(){
+    this.router.navigateByUrl('insurance');
+  }
+
+
+
+
 }

@@ -1,6 +1,6 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>약관동의</ion-title>
+  <ion-toolbar color = "primary">
+    <ion-title>정보 제공 동의</ion-title>
       <ion-buttons slot = "start">
           <ion-back-button text=""></ion-back-button>
       </ion-buttons>
@@ -22,25 +22,25 @@
         <ion-label>전체동의</ion-label>
       </ion-item>
     <ion-list-header>
-        <ion-label>(필수)개인정보 수집 및 이용목적</ion-label>
+        <ion-label>필수 제공 정보</ion-label>
       </ion-list-header>
-      <ion-item *ngFor="let item of items1">
-          <ion-label>{{item.text}}</ion-label>
+      <ion-item *ngFor="let item of items2">
+          <ion-label>{{item.name}}</ion-label>
+          <ion-checkbox slot="start" [(ngModel)]="item.isChecked"></ion-checkbox>
+      </ion-item>
+      <ion-list-header>
+        <ion-label>선택 제공 정보</ion-label>
+      </ion-list-header>
+      <ion-item *ngFor="let item of items3">
+          <ion-label>{{item.name}}{{item.img}}</ion-label>
           <ion-checkbox slot="start" [(ngModel)]="item.isChecked"></ion-checkbox>
       </ion-item>
   <ion-list-header>
-    <ion-label>(선택)제 3자 정보 제공 동의</ion-label>
+    <ion-label>정보 제공 범위</ion-label>
   </ion-list-header>
-  <ion-item *ngFor="let item of items2">
+  <ion-item *ngFor="let item of items1">
     <ion-checkbox slot="start" [(ngModel)]="item.isChecked"></ion-checkbox>
     <ion-label>{{item.name}}</ion-label>
   </ion-item>
-  <ion-list-header>
-      <ion-label>(선택)마케팅 활용 동의</ion-label>
-    </ion-list-header>
-    <ion-item *ngFor="let item of items3">
-      <ion-checkbox slot="start" [(ngModel)]="item.isChecked"></ion-checkbox>
-      <ion-label>{{item.name}}</ion-label>
-    </ion-item>
 </ion-list>
 </ion-content>

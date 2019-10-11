@@ -14,45 +14,54 @@ export class AgreePage implements OnInit {
   items1 = [{
     isRight:false,
     isChecked: false,
-    name: '개인정보 처리\n',
-    text: '홈페이지 회원 가입 및 관리, 서비스 제공, 민원처리'
+    name: '롯데손해보험'
   },
   {
     isRight:false,
     isChecked: false,
-  name: '회원정보 수집 및 보유',
-  text: '아이디, 성명, 주소, 휴대폰번호, 이메일주소'
+  name: '메리츠화재'
+  },
+  {
+    isRight:false,
+    isChecked: false,
+  name: '삼성화재'
+  },
+  {
+    isRight:false,
+    isChecked: false,
+  name: '한화손해보험'
+  },
+  {
+    isRight:false,
+    isChecked: false,
+  name: '현대해상'
+  }
+  ,
+  {
+    isRight:false,
+    isChecked: false,
+  name: 'DB손해보험'
   }]
   items2 = [{
     isRight:false,
-    isChecked: false,
-    name: '회원 정보'
-  },
-  {
-    isRight:false,
-    isChecked: false,
+    isChecked: true,
     name: '나의 펫 정보'
-  },
-  {
-    isRight:false,
-    isChecked: false,
-    name: '펫의 진료기록'
-  },
+  }
   ];
   items3 = [  {
     isRight:false,
     isChecked: false,
-    name: '앱 push',
+    name: '펫의 진료기록',
   },
     {
     isRight:false,
     isChecked: false,
-    name: '이메일',
+    name: '연락처',
   },
   {
     isRight:false,
     isChecked: false,
-    name: 'SMS',
+    name: '이메일',
   }
   ];
   selOptions: Array < string > ;
@@ -77,9 +86,9 @@ export class AgreePage implements OnInit {
   clickAlert(){
     this.alertCtrl.create({
       header: '',
-      message: '약관이 저장되었습니다.',
+      message: '저장되었습니다.',
       buttons: [{
-        text: '네',
+        text: '확인',
         handler:()=>{
           this.goback();
         } 

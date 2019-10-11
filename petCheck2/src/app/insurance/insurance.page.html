@@ -11,6 +11,9 @@
   <!-- <ion-list *ngFor="let item of insData"> -->
   <ion-item *ngFor="let item of insData">
     <table>
+        <tr>
+            <img src="{{item.companyimg}}">
+          </tr>
       <tr>
         <ion-label>{{item.insuranceName}}</ion-label>
       </tr>
@@ -18,18 +21,11 @@
         <ion-label>{{item.companyName}}</ion-label>
       </tr>
       <tr>
-        <ion-label>가입나이 조건 {{item.age_limit}}</ion-label>
-
-      </tr>
-      <tr>
-        <ion-label>갱신 년도 {{item.renew_year}}</ion-label>
+          <ion-label>{{item.pay_month}}</ion-label>
 
       </tr>
     </table>
-
-
-    <ion-label>갱신 년도 {{item.renew_year}}</ion-label>
-    <ion-label>{{item.pay_month}}</ion-label>
+    
 
   </ion-item>
 

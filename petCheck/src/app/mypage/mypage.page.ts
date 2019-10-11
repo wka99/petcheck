@@ -10,6 +10,8 @@ import {AngularFireStorage} from 'angularfire2/storage';
 import {AngularFireDatabase, snapshotChanges } from 'angularfire2/database';
 import {Camera} from '@ionic-native/camera/ngx';
 
+
+
 interface User {
   email?: string;
   password?: string;
@@ -133,8 +135,8 @@ user: User = {
     this.navCtrl.navigateForward('/receipt');
     console.log("selectMyshopping");
   }
-  receipt() {
-    this.router.navigate(['receipt']);
+  Agree() {
+    this.router.navigate(['agree']);
   }
   logout() {
     this.userid = null;
@@ -173,6 +175,9 @@ user: User = {
         this.showImage();
       });
     });
+  }
+  agree(){
+
   }
   showImage() {
     // tslint:disable-next-line: prefer-const

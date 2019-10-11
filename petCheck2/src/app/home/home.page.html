@@ -33,9 +33,9 @@
           <ion-col *ngFor="let item of posts" col-12 no-padding>
           <ion-card>
             <ion-card-content class="fixline" >
-              <b>{{item.hos}}</b><br><br>
-              <b>진단명:&nbsp;</b>{{item.name}}<br>
-              <b>비용:&nbsp;</b>{{item.price}}
+              <div>{{item.hos}}</div>
+              <div style = "width: 100%; text-align: right;">진단명:&nbsp;{{item.name}}</div>
+              <div style = "width: 100%; text-align: right;"><font size = "4">비용:&nbsp;{{item.price}}원</font></div>
             </ion-card-content>
           </ion-card>
           </ion-col>

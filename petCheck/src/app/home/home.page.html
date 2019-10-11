@@ -15,10 +15,16 @@
         (ionInput)="getItems($event)"
         placeholder="치료비가 궁금한 병명/수술 등">
       </ion-searchbar>
-      <br>
-      <b>&nbsp;&nbsp; 평균 치료비:&nbsp;{{avg}}원</b><br>
-      <b>&nbsp;&nbsp; 최대:&nbsp;{{max}}원</b><br>
-      <b>&nbsp;&nbsp; 최소:&nbsp;{{min}}원</b><br>
+      <div class = "price" id = "avgpri">
+        평균 치료비:&nbsp;{{avg}}원 
+      </div>
+      <div class = "price" id = "maxpri">
+        최대:&nbsp;{{max}}원 <div class = "info_i"><ion-icon name="information-circle" style="zoom:2.0;" color ="tertiary"></ion-icon></div>
+      </div>
+      <div class = "price" id = "minpri">
+        최소:&nbsp;{{min}}원 <div class = "info_i"><ion-icon name="information-circle" style="zoom:2.0;" color ="tertiary"></ion-icon></div>
+      </div>
+      <hr width=100% color = "lightgray">
           <ion-col *ngFor="let item of posts" col-12 no-padding>
           <ion-card>
             <ion-card-content class="fixline" >

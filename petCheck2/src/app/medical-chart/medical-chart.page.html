@@ -1,9 +1,165 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text=""defaultHref="mypage"></ion-back-button>
+    </ion-buttons>
     <ion-title>진료 확인</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-{{price}}
+  <ion-button expand="block" shape="round" fill="outline" (click)="download()">
+    <ion-icon name="contact"></ion-icon>(복숭이)의 신규 진단서 업로드
+  </ion-button>
+
+  <ion-card *ngIf="newValue==1" color = "primary">
+    <ion-card-content>
+      2018-09-15 (복숭이)의 진단서
+      <ion-grid>
+        <ion-row>
+          <ion-col>진찰/상담료</ion-col>
+          <ion-col>재진<ion-icon name="checkmark-circle"></ion-icon>
+          </ion-col>
+          <ion-col>4400</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>기생충구제</ion-col>
+          <ion-col>외부기생충<ion-icon name="checkmark-circle"></ion-icon>
+          </ion-col>
+          <ion-col>30000</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>예방주사</ion-col>
+          <ion-col>광견병백신<ion-icon name="checkmark-circle"></ion-icon>
+          </ion-col>
+          <ion-col>25000</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>임상검사</ion-col>
+          <ion-col>혈구검사<ion-icon name="checkmark-circle"></ion-icon>
+          </ion-col>
+          <ion-col>50000</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>합계</ion-col>
+          <ion-col></ion-col>
+          <ion-col>92400</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      2018-08-12 (복숭이)의 진단서
+      <ion-grid>
+        <ion-row>
+          <ion-col>진찰/상담료</ion-col>
+          <ion-col>재진<ion-icon name="checkmark-circle"></ion-icon>
+          </ion-col>
+          <ion-col>{{price}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>주사료</ion-col>
+          <ion-col>혈관<ion-icon name="checkmark-circle"></ion-icon>
+          </ion-col>
+          <ion-col>15000</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>처방료</ion-col>
+          <ion-col>내복약 3일<ion-icon name="checkmark-circle"></ion-icon>
+          </ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>기생충구제</ion-col>
+          <ion-col>심장사상충<ion-icon name="checkmark-circle"></ion-icon>
+          </ion-col>
+          <ion-col>{{price}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>예방주사</ion-col>
+          <ion-col>코로나백신<ion-icon name="checkmark-circle"></ion-icon>
+          </ion-col>
+          <ion-col>{{price}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>임상검사</ion-col>
+          <ion-col>안압검사<ion-icon name="checkmark-circle"></ion-icon>
+          </ion-col>
+          <ion-col>{{price}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>수액요법</ion-col>
+          <ion-col>수액첨가제<ion-icon name="checkmark-circle"></ion-icon>
+          </ion-col>
+          <ion-col>{{price}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>영상진단</ion-col>
+          <ion-col>초음파<ion-icon name="checkmark-circle"></ion-icon>
+          </ion-col>
+          <ion-col>{{price}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>입원</ion-col>
+          <ion-col>1일<ion-icon name="checkmark-circle"></ion-icon>
+          </ion-col>
+          <ion-col>{{price}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>합계</ion-col>
+          <ion-col></ion-col>
+          <ion-col>{{price}}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      2018-05-24 (복숭이)의 진단서
+      <ion-grid>
+        <ion-row>
+          <ion-col>진찰/상담료</ion-col>
+          <ion-col>재진<ion-icon name="checkmark-circle"></ion-icon>
+          </ion-col>
+          <ion-col>{{price}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>주사료</ion-col>
+          <ion-col>혈관<ion-icon name="checkmark-circle"></ion-icon>
+          </ion-col>
+          <ion-col>{{price}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>임상검사</ion-col>
+          <ion-col>안압검사<ion-icon name="checkmark-circle"></ion-icon>
+          </ion-col>
+          <ion-col>{{price}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>수액요법</ion-col>
+          <ion-col>수액첨가제<ion-icon name="checkmark-circle"></ion-icon>
+          </ion-col>
+          <ion-col>{{price}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>영상진단</ion-col>
+          <ion-col>초음파<ion-icon name="checkmark-circle"></ion-icon>
+          </ion-col>
+          <ion-col>{{price}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>입원</ion-col>
+          <ion-col>1일<ion-icon name="checkmark-circle"></ion-icon>
+          </ion-col>
+          <ion-col>{{price}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>합계</ion-col>
+          <ion-col></ion-col>
+          <ion-col>{{price}}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

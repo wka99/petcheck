@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button text="" defaultHref="insurance"></ion-back-button>
+        </ion-buttons>
+    <ion-title>{{title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card  >
+  <ion-card-content>
+      <!-- <ion-item lines="none">
+          <img width="100%" height="100%" src="{{ckimg}}"/>
+      </ion-item> -->
+    <img src="{{companyimg}}"/>
+    <ion-item lines="none">
+        <ion-label>
+           <h1><b>{{companyName}}</b></h1> 
+        </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+        <ion-label>
+          <h2> <b>월 보험료&nbsp;</b>{{pay_month}}원</h2> 
+        </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+        <ion-label>
+            <h2> <b>가입 연경 제한 &nbsp;</b>{{age_limit}}살</h2>
+        </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+        <ion-label>
+            <h2> <b>갱신 주기 &nbsp;</b>{{renew_year}}년</h2>
+        </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+        <ion-label>
+            <h2> <b>갱신 상한 &nbsp;</b>{{renew_disease_year}}년</h2>
+        </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+        <ion-label>
+            <h2> <b>만기에 따른 보상 금액 &nbsp;</b>{{reward_year}}</h2>
+        </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+        <ion-label>
+            <h2> <b>보상 비율 &nbsp;</b>{{reward_portion}}%</h2>
+        </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+        <ion-label>
+            <h2> <b>보상 범위 &nbsp;</b>{{reward_range}}년</h2>
+        </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+        <ion-label >
+            <h2><b>보상되지 않는 범위 </b></h2> 
+        </ion-label>
+    </ion-item>
+    <ion-item>
+        <ion-textarea overflow="hidden" class="textbox" rows="3"
+          readonly
+          value="{{nonreward}}">
+        </ion-textarea>
+    </ion-item>
+    
+    <ion-item lines="none">
+        <ion-label >
+            <h2><b>상세설명 </b></h2> 
+        </ion-label>
+    </ion-item>
+    <ion-item>
+        <ion-textarea overflow="hidden" class="textbox" rows="10"
+          readonly
+          value="{{description}}">
+        </ion-textarea>
+    </ion-item>
+
+
+  </ion-card-content>
+</ion-card>
+
+
+</ion-content>

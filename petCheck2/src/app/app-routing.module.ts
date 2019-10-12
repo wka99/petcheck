@@ -10,8 +10,9 @@ const routes: Routes = [
   { path: 'medical-chart', loadChildren: './medical-chart/medical-chart.module#MedicalChartPageModule' },
   { path: 'movemin/:d/:p', loadChildren: './movemin/movemin.module#MoveminPageModule' },
   { path: 'movemax/:d/:p', loadChildren: './movemax/movemax.module#MovemaxPageModule' },
-  { path: 'insurance', loadChildren: './insurance/insurance.module#InsurancePageModule' },  { path: 'hospital', loadChildren: './hospital/hospital.module#HospitalPageModule' },
-
+  { path: 'insurance', loadChildren: './insurance/insurance.module#InsurancePageModule' },
+  { path: 'insurance-detail/:insuranceName', loadChildren: './insurance-detail/insurance-detail.module#InsuranceDetailPageModule' },
+  { path: 'hospital', loadChildren: './hospital/hospital.module#HospitalPageModule' },
 
 
 

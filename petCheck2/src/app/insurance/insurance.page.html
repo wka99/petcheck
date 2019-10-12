@@ -1,9 +1,34 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>insurance</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text="" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>추천 보험</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-content>
+    <ion-col *ngFor="let item of insData" col-12 no-padding>
+      <ion-card (click)="getPost(item)">
+          <img src="{{item.companyimg}}" width="100px" height="150px"/>
+        <!-- <img src="{{}}" width="100px" height="150px"/> -->
+        <ion-card-content>
+          <ion-row>
+            <ion-col width-100>
+              <h1><b>{{item.insuranceName}}</b> </h1>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col width-30>
+              <h4>{{item.companyName}} </h4>
+            </ion-col>
+         
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+
+  </ion-content>
 
 </ion-content>

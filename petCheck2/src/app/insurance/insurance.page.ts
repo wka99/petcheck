@@ -19,9 +19,8 @@ export class InsurancePage implements OnInit {
   }
   SetQueryOptionsData(items: any) { //items는 json데이터들
     this.insData = items;
-    console.log(this.insData);
   }
-
+  
   ngOnInit() {
   }
 

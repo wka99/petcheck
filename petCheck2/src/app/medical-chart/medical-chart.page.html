@@ -8,8 +8,11 @@
 </ion-header>
 
 <ion-content>
-    <input id="f" (input)="up()" type="file"><br>
-    <a id="d" href="">복숭이 진료기록 다운로드</a>
+  <div style = "width:90%; border: solid 1px silver; margin-top:10px; margin-left:5%; padding: 3px;">
+    <input id="f" (input)="up()" type="file"><br></div>
+    <div style = "border: 2px solid rgb(206, 34, 34); width: 210px; border-radius:10px; position:relative; margin-top: 5px; margin-left:100%; right: 220px;text-align: center;">
+      <a id="d" href="" style="color:rgb(206, 34, 34)">복숭이 진료기록 다운로드</a>
+    </div>
   <ion-card *ngIf="newValue==1" color = "primary">
     <ion-card-content>
       2018-09-15 (복숭이)의 진단서

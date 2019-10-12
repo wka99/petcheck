@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'movemax/:d/:p', loadChildren: './movemax/movemax.module#MovemaxPageModule' },
   { path: 'insurance', loadChildren: './insurance/insurance.module#InsurancePageModule' },
   { path: 'insurance-detail/:insuranceName', loadChildren: './insurance-detail/insurance-detail.module#InsuranceDetailPageModule' },
+  { path: 'hospital', loadChildren: './hospital/hospital.module#HospitalPageModule' },
 
 
 

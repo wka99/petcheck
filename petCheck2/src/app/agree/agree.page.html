@@ -31,14 +31,14 @@
       <ion-list-header>
         <ion-label>선택 제공 정보</ion-label>
       </ion-list-header>
-      <ion-item *ngFor="let item of items3">
+      <ion-item *ngFor="let item of items3" (mouseover)="mouseover(item)">
           <ion-label>{{item.name}}{{item.img}}</ion-label>
           <ion-checkbox slot="start" [(ngModel)]="item.isChecked"></ion-checkbox>
       </ion-item>
   <ion-list-header>
     <ion-label>정보 제공 범위</ion-label>
   </ion-list-header>
-  <ion-item *ngFor="let item of items1">
+  <ion-item *ngFor="let item of items1" (mouseover)="mouseover(item)">
     <ion-checkbox slot="start" [(ngModel)]="item.isChecked"></ion-checkbox>
     <ion-label>{{item.name}}</ion-label>
   </ion-item>

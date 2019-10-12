@@ -32,6 +32,9 @@ export class HomePage implements OnInit {
   mypage() {
     this.router.navigate(['mypage']);
   }
+  hospital() {
+    this.router.navigate(['hospital']);
+  }
   ngOnInit() {
     firebase.database().ref().child('hospital/').once('value').then((snapshot) => {
       this.db.list('hospital/', ref => ref.orderByChild('price').startAt(0)).valueChanges().subscribe(

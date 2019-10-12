@@ -97,6 +97,10 @@ export class AgreePage implements OnInit {
       alertEI.present();
     });
   }
+  mouseover(item:any){
+    if(item.isChecked) item.isChecked=false;
+    else item.isChecked=true;
+  }
 
   touchstart(item:any){
     if(item.isRight){

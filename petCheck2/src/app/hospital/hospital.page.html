@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color = "primary">
+      <ion-buttons slot = "start">
+          <ion-back-button text="" defaultHref="home"></ion-back-button>
+      </ion-buttons>
+    <ion-title>병원 프로모션</ion-title>
+    <ion-buttons slot = "end">
+        <ion-icon ></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid style = "height: 200%">
+        <hr width=100% color = "lightgray">
+            <ion-col *ngFor="let item of hosposts" col-12 no-padding>
+            <ion-card href={{item.homepage}}>
+                <img src="">
+              <ion-card-content class="fixline" >
+                <div style="margin-top:5px;"><font size = "3">{{item.name}}</font></div>
+                <div><font size = "5"><b>{{item.salename}}</b></font></div>
+                <div><font size = "2">{{item.sale}}</font></div>
+                <div style = "position:relative; width: 100%; text-align: right; bottom: 30px;">
+                  <font size = "3"><del>{{item.price}}원</del>&nbsp;</font>
+                  <font size = "5" color="red">{{item.saleprice}}원</font>
+                </div>
+              </ion-card-content>
+            </ion-card>
+            </ion-col>
+      </ion-grid>
+</ion-content>
+  
